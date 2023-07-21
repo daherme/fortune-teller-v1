@@ -1,0 +1,87 @@
+/* Style the video: 100% width and height to cover the entire window */
+.myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  font-family: "Yatra One", cursive;
+  color: tan;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+  text-shadow: 3px 5px 11px #651810, 0 0 1em #97421b, 0 0 1.2em #ff8600;
+}
+
+.adviceContainer {
+  width: 50%;
+}
+
+.advice {
+  letter-spacing: 3px;
+  font-size: 21px;
+  color: whitesmoke;
+  font-family: "Yusei Magic", sans-serif;
+  text-shadow: 1px 2px 3px #651810, 0 0 1em #97421b, 0 0 1.2em #ff8600;
+  margin: 10px;
+  padding-bottom: 45px;
+}
+
+/* CSS */
+.button {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: tan;
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 25px;
+  font-family: "Yatra One", cursive;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: 1px 2px 5px #651810, 0 0 1em #97421b, 0 0 1.2em #ff8600;
+}
+
+.button:hover,
+.button:focus-visible {
+  --color: whitesmoke;
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
